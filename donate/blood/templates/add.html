@@ -1,0 +1,35 @@
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+<!DOCTYPE html>
+<html>
+{% load bootstrap3 %}
+
+<link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}">
+  <script src="{% static "js/jquery.min.js" %}"></script>
+  <script src="{% static "js/bootstrap.min.js" %}"></script>
+    <body>
+    <div class="container">
+      <div class = "row">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation"><a href="/">Home</a></li>
+            <li role="presentation"><a href="/addme">Add Me In</a></li>
+            <li role="presentation"><a href="/contact">Contact</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">We Help</h3>
+      </div>
+        <h2>With every Drop, a Life can be saved</h2>
+    </div>
+    <div>
+    {# <div class = "col-md-4"><div>#}
+    <div class = "col-md-4">
+            <span class="input-addon primary"></span>
+        <form action="" method="POST"> {% csrf_token %}
+          {% bootstrap_form form %}
+            <input type="submit" value="I'm Ready to Save a Life"></p>
+        </form>
+    </body>
+</html>
